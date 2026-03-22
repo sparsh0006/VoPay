@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+
+  :root {
+    --color-gold: #FCFF52;
+    --color-green: #35D07F;
+    --color-dark: #0D0D0D;
+    --color-card: #1A1A1A;
+    --color-border: #2A2A2A;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--color-dark);
+    color: white;
+    font-family: var(--font-space), monospace;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: black;
+  }
+
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--color-card); }
+  ::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+}
+
+@layer components {
+  .card {
+    @apply bg-celo-card border border-celo-border rounded-2xl p-6;
+  }
+
+  .btn-primary {
+    @apply bg-celo-gold text-black font-bold px-6 py-3 rounded-xl
+           hover:brightness-110 active:scale-95 transition-all duration-150
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply border border-celo-border text-celo-muted px-6 py-3 rounded-xl
+           hover:border-white hover:text-white transition-all duration-150;
+  }
+
+  .mic-ring {
+    @apply absolute inset-0 rounded-full border-2 border-celo-gold/30
+           animate-ping;
+  }
+}

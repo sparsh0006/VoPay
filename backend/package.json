@@ -1,0 +1,26 @@
+{
+  "name": "splitagent-backend",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.16.0",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2",
+    "openai": "^4.77.0",
+    "telegraf": "^4.16.3",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "prisma": "^5.22.0"
+  }
+}
